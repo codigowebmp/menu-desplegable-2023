@@ -1,0 +1,91 @@
+/* importamos las fuentes de google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+body{
+    background-color: #fd507e;
+}
+header{
+    background-color: #f3f3f3;
+    display: flex;
+    align-items: center;
+    padding: 20px 50px;
+}
+header nav .menu-horizontal{
+    display: flex;
+    list-style: none;
+}
+header nav .menu-horizontal > li{
+    position: relative;
+}
+.menu-vertical{
+    display: none;
+    list-style: none;
+    position: absolute;
+    background-color: #fff;
+    top: 30px;
+    width: 400px;
+    padding: 30px 50px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 7px #050505;
+}
+header nav .menu-horizontal > li > a{
+    text-decoration: none;
+    color: #6e6d7a;
+    padding: 30px;
+}
+header nav .menu-horizontal > li > a:hover{
+    color: #000;
+}
+header nav .menu-horizontal > li:hover .menu-vertical{
+    display: block;
+}
+.item-menu-vertical{
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+}
+.menu-vertical li{
+    padding: 20px 0;
+}
+.item-menu-vertical .icono{
+    margin-right: 30px;
+    background-color: #f4f4f4;
+    width: 50px;
+    height: 50px;
+    padding: 7px;
+    border-radius: 5px;
+    transition: .9s;
+}
+.item-menu-vertical .icono img{
+    width: 100%;
+}
+.item-menu-vertical .info .titulo{
+    display: block;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+.item-menu-vertical .info .descripcion{
+    display: block;
+    text-decoration: none;
+    color: #6d6b6d;
+    font-size: 12px;
+}
+.item-menu-vertical > img{
+    width: 15px;
+    position: absolute;
+    right: 30px;
+    filter: opacity(0);
+    transition: .5s;
+}
+header nav .menu-vertical > li:hover .item-menu-vertical > img{
+    filter: opacity(1);
+}
+.menu-vertical li:hover .icono{
+    background-color: #8a8a8a;
+}
